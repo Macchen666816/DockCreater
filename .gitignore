@@ -1,0 +1,29 @@
+*.iml
+.gradle/
+.kotlin/
+.idea/
+.DS_Store
+**/build/
+/captures/
+/outputs/
+/.externalNativeBuild/
+/.cxx/
+local.properties
+*.jks
+*.keystore
+*.p12
+signing.properties
+keystore.properties
+.env
+.env.*
+!.env.example
+
+# Local investigation notes contain device paths, screenshots and build evidence.
+/docs/gpu-preview-lifecycle.md
+/docs/dock-detection-recovery.md
+/docs/gpu-wallpaper-preview.md
+/docs/release-packaging.md
+/docs/liquid-glass-port.md
+
+# This real user screenshot is replaced by a generated regression fixture.
+/app/src/androidTest/assets/dock-nested-attachment.png

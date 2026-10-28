@@ -1,0 +1,32 @@
+Backdrop / AndroidLiquidGlass 2.0.1
+https://github.com/kyant0/AndroidLiquidGlass
+Copyright 2025 Kyant
+License: Apache License 2.0 (see Backdrop-Apache-2.0.txt)
+
+LiquidGlassRenderer.kt adapts the rounded-rectangle signed distance function,
+circleMap lens profile, depth normals, seven-tap dispersion channel weights
+and directional highlight from backdrop/internal/Shaders.kt and effects/Lens.kt.
+Changes: Kotlin CPU Bitmap renderer, bilinear pixel sampling, static wallpaper
+coordinates, adjustable optical parameters, tint and soft edge illumination.
+No upstream executable, native binary or build script has been included.
+
+GpuWallpaperPreview.kt contains the corresponding Android 13+ AGSL preview
+adaptation of these optical formulas, with clamped wallpaper sampling, the CPU
+rim illumination and RenderEffect blur. PNG export retains the CPU renderer.
+
+The com/kyant/backdrop source tree also adapts the commonMain + androidMain
+Backdrop 2.0.1 rendering implementation for interactive Compose UI controls.
+Changes: merged Android expect/actual declarations, explicit node argument
+instead of experimental context parameters, Android SDK guard in shader cache,
+and CornerBasedShape-only lens support (no kyant Shapes dependency).
+GlassControls.kt adapts the catalog's background-sampling and optical material
+recipes with DockCreater layout, Compose accessibility semantics and interaction states.
+
+The catalog components LiquidButton, LiquidToggle, LiquidSlider, LiquidBottomTabs,
+LiquidBottomTab and utilities InteractiveHighlight, DampedDragAnimation,
+DragGestureInspector and Coroutines are adapted under com/kyant/backdrop/catalog.
+Original spring constants, touch highlight, velocity deformation, optical
+transitions and layered tab selection are retained. Changes include Android's
+monotonic clock, RoundedCornerShape, SDK-compatible content tint, accessibility
+and disabled states, full-height slider touch target, cancellation handling,
+horizontal gesture arbitration, bounded slider thumbs and safe outer tab insets.
