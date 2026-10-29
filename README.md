@@ -14,6 +14,20 @@
   <img src="docs/assets/dockcreater-overview.png" alt="DockCreater workflow and glass styles" width="100%">
 </p>
 
+## Download
+
+**[Download the signed Android APK](https://github.com/Macchen666816/DockCreater/releases/latest)** — Android 12+ / ARM64. Choose `DockCreater-1.0.3-arm64-release.apk` under Assets; the source-code archives are not installable apps. SHA-256 checksums are included in the release.
+
+The release uses the existing project release signing identity. It can update earlier releases signed with that key; a Debug installation uses a different signature and cannot be overwritten directly.
+
+## Actual wallpaper output
+
+<img src="docs/assets/wallpaper-comparison.png" alt="Actual exported wallpaper: original, liquid glass, frosted glass, and enlarged dock details" width="100%">
+
+These are real 1080 × 2400 PNG outputs from the app's CPU renderer and MediaStore export path, generated on an Android 13 ARM64 emulator. The lower row enlarges the exported dock region. No launcher icons or mock glass overlays were added to these outputs.
+
+View the full-resolution PNGs: [original](docs/assets/wallpaper-original.png) · [liquid glass](docs/assets/wallpaper-liquid.png) · [frosted glass](docs/assets/wallpaper-frosted.png).
+
 ## What it does
 
 DockCreater prepares a wallpaper image for a phone home screen and renders a dock-shaped glass surface over it. Import a picture, adjust the crop, position or detect the dock, tune the glass, then export a full-resolution PNG.

@@ -14,6 +14,20 @@
   <img src="docs/assets/dockcreater-overview.png" alt="DockCreater 流程与玻璃效果概览" width="100%">
 </p>
 
+## 下载
+
+**[下载已签名 Android APK](https://github.com/Macchen666816/DockCreater/releases/latest)** — Android 12+ / ARM64。在 Assets 中选择 `DockCreater-1.0.3-arm64-release.apk`；Source code 压缩包不是安装包。Release 同时提供 SHA-256 校验文件。
+
+安装包沿用项目原有 Release 签名，可覆盖同证书的旧版 Release；Debug 包签名不同，不能直接覆盖。
+
+## 实际导出的壁纸
+
+<img src="docs/assets/wallpaper-comparison.png" alt="实际导出：原图、液态玻璃、磨砂毛玻璃，以及 Dock 区域放大图" width="100%">
+
+这些是通过应用 CPU 渲染器和 MediaStore 导出流程，在 Android 13 ARM64 模拟器上实际生成的 1080 × 2400 PNG。下排是导出图片的 Dock 区域放大；没有额外合成桌面图标或玻璃效果。
+
+查看全分辨率 PNG：[原图](docs/assets/wallpaper-original.png) · [液态玻璃](docs/assets/wallpaper-liquid.png) · [磨砂毛玻璃](docs/assets/wallpaper-frosted.png)。
+
 ## 功能
 
 DockCreater 会根据手机屏幕比例处理壁纸，并在图像上渲染 Dock 形状的玻璃区域。导入图片后，可以裁切、调整或识别 Dock 位置、调节玻璃效果，最后导出全分辨率 PNG。
